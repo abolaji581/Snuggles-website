@@ -89,6 +89,12 @@ section{padding:90px 0}.sets{background:#fffdf8}.shop{background:var(--cream)}
 .qty button{border:0;background:transparent;width:31px;height:35px}.qty span{width:27px;text-align:center;font-size:12px;font-weight:700}
 .add-product{height:35px;flex:1;background:var(--brown);font-size:12px}
 
+
+.order-status{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#f6efe5;font-size:12px;color:var(--muted);display:none}.order-status.show{display:block}.order-status strong{color:var(--ink)}
+.status-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#6f8a64;margin-right:7px}
+.confirm-list{margin:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.confirm-row{display:flex;justify-content:space-between;gap:15px;padding:10px 0;font-size:12px}.confirm-row+.confirm-row{border-top:1px solid var(--line)}
+.product-photo{width:100%;height:100%;object-fit:cover;display:block}.photo-label{position:absolute;left:12px;bottom:12px;padding:6px 9px;border-radius:999px;background:rgba(255,253,248,.88);font-size:9px;font-weight:700;color:var(--ink);backdrop-filter:blur(8px)}
+
 footer{padding:60px 0 30px;background:var(--ink);color:#fffaf2}
 .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:45px}
 footer .logo{font-size:34px}.tagline{color:#cfc2b5;max-width:300px;margin-top:10px}.footer-title{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#a99d91;margin-bottom:12px;font-weight:700}.footer-text{font-size:13px;color:#e5dcd3;line-height:1.9}
@@ -158,32 +164,32 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
   <div class="set-grid">
     <article class="set-card featured">
       <span class="badge">Most loved</span>
-      <div class="set-art full"><div class="art-pillow a"></div><div class="art-pillow b"></div><div class="art-duvet"></div></div>
+      <div class="set-art full" style="background-image:url(https://www.simplehomeplus.com/cdn/shop/files/cfcd830b-5a7d-407b-8e19-4e8ce31125cd_3b0e5c07-987d-406e-b280-2e2cee0b4c7f_1024x1024.jpg?v=1723337928);background-size:cover;background-position:center"><span class="photo-label">Bedding inspiration</span></div>
       <h3>Full Set</h3><div class="set-items">1 Bedsheet
 1 Duvet
 2 Pillowcases
 2 Pillow Inserts
 1 Duvet Insert</div>
-      <div class="price-row"><span class="price">₦65,000</span><span class="old-price">₦73,000</span></div>
-      <button class="add-set" data-id="set-full" data-name="Full Set" data-price="65000" data-meta="Complete bedding set">Add to cart</button>
+      <div class="price-row"><span class="price">₦55,000</span><span class="old-price">₦65,000</span></div>
+      <button class="add-set" data-id="set-full" data-name="Full Set" data-price="55000" data-meta="Complete bedding set">Add to cart</button>
     </article>
 
     <article class="set-card">
-      <div class="set-art mini"><div class="art-pillow a"></div><div class="art-pillow b"></div><div class="art-duvet"></div></div>
+      <div class="set-art mini" style="background-image:url(https://i5.walmartimages.com/asr/4056644b-b9ef-4438-af66-abf62f396d81.d8f9e1c0dc979d65d52b28c64b254fbc.jpeg);background-size:cover;background-position:center"><span class="photo-label">Bedding inspiration</span></div>
       <h3>Mini Set</h3><div class="set-items">1 Bedsheet
 2 Pillowcases
 1 Duvet</div>
-      <div class="price-row"><span class="price">₦35,000</span><span class="old-price">₦43,000</span></div>
-      <button class="add-set" data-id="set-mini" data-name="Mini Set" data-price="35000" data-meta="Everyday essentials">Add to cart</button>
+      <div class="price-row"><span class="price">₦29,000</span><span class="old-price">₦36,000</span></div>
+      <button class="add-set" data-id="set-mini" data-name="Mini Set" data-price="29000" data-meta="Everyday essentials">Add to cart</button>
     </article>
 
     <article class="set-card">
-      <div class="set-art student"><div class="art-pillow a"></div><div class="art-duvet"></div></div>
+      <div class="set-art student" style="background-image:url(https://rehuce.cl/cdn/shop/files/WhatsApp_Image_2024-11-14_at_12.23.08.jpg?v=1747667174&width=1445);background-size:cover;background-position:center"><span class="photo-label">Bedding inspiration</span></div>
       <h3>Student Package</h3><div class="set-items">1 Bedsheet
 2 Pillowcases
 1 Pillow Insert</div>
-      <div class="price-row"><span class="price">₦22,000</span><span class="old-price">₦25,000</span></div>
-      <button class="add-set" data-id="set-student" data-name="Student Package" data-price="22000" data-meta="Student essentials">Add to cart</button>
+      <div class="price-row"><span class="price">₦18,000</span><span class="old-price">₦21,000</span></div>
+      <button class="add-set" data-id="set-student" data-name="Student Package" data-price="15000" data-meta="Student essentials">Add to cart</button>
     </article>
   </div>
 </div>
@@ -208,7 +214,7 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
   <div class="product-grid" id="productGrid">
 
     <article class="product-card" data-category="bedsheets">
-      <div class="product-art"><div class="fold" id="art-bedsheet"></div></div>
+      <div class="product-art"><img class="product-photo" src="https://i.ebayimg.com/images/g/1fwAAOSwYpNnmMLB/s-l1200.jpg" alt="Cream beige bedding inspiration" loading="lazy"><span class="photo-label">Bedding inspiration</span><div class="fold" id="art-bedsheet" style="display:none"></div></div>
       <div class="product-info">
         <h3>Fitted Bedsheet</h3><div class="product-meta">Cream · Taupe · Chocolate</div>
         <div class="swatches">
@@ -218,13 +224,13 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
         </div>
         <div class="product-bottom">
           <div class="qty"><button class="minus">−</button><span>1</span><button class="plus">+</button></div>
-          <button class="add-product" data-id="bedsheet" data-name="Fitted Bedsheet" data-price="15000" data-meta="Bedsheet">₦15,000 · Add</button>
+          <button class="add-product" data-id="bedsheet" data-name="Fitted Bedsheet" data-price="12000" data-meta="Bedsheet">₦12,000 · Add</button>
         </div>
       </div>
     </article>
 
     <article class="product-card" data-category="duvets">
-      <div class="product-art"><div class="fold" id="art-duvet-cover"></div></div>
+      <div class="product-art"><img class="product-photo" src="https://rehuce.cl/cdn/shop/files/WhatsApp_Image_2024-11-14_at_12.23.08.jpg?v=1747667174&width=1445" alt="Neutral beige duvet bedding inspiration" loading="lazy"><span class="photo-label">Bedding inspiration</span><div class="fold" id="art-duvet-cover" style="display:none"></div></div>
       <div class="product-info">
         <h3>Duvet Cover</h3><div class="product-meta">Cream · Taupe</div>
         <div class="swatches">
@@ -233,25 +239,25 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
         </div>
         <div class="product-bottom">
           <div class="qty"><button class="minus">−</button><span>1</span><button class="plus">+</button></div>
-          <button class="add-product" data-id="duvet-cover" data-name="Duvet Cover" data-price="20000" data-meta="Duvet cover">₦20,000 · Add</button>
+          <button class="add-product" data-id="duvet-cover" data-name="Duvet Cover" data-price="16000" data-meta="Duvet cover">₦16,000 · Add</button>
         </div>
       </div>
     </article>
 
     <article class="product-card" data-category="duvets">
-      <div class="product-art"><div class="quilt" id="art-duvet-insert"></div></div>
+      <div class="product-art"><img class="product-photo" src="https://i5.walmartimages.com/asr/4056644b-b9ef-4438-af66-abf62f396d81.d8f9e1c0dc979d65d52b28c64b254fbc.jpeg" alt="Soft cream duvet bedding inspiration" loading="lazy"><span class="photo-label">Bedding inspiration</span><div class="quilt" id="art-duvet-insert" style="display:none"></div></div>
       <div class="product-info">
         <h3>Duvet Insert</h3><div class="product-meta">Soft filling · Cream</div>
         <div class="swatches"><button class="swatch" data-art="art-duvet-insert" data-color="#EFE6D6" data-name="Cream" style="background:#EFE6D6" aria-label="Cream"></button></div>
         <div class="product-bottom">
           <div class="qty"><button class="minus">−</button><span>1</span><button class="plus">+</button></div>
-          <button class="add-product" data-id="duvet-insert" data-name="Duvet Insert" data-price="18000" data-meta="Duvet filling">₦18,000 · Add</button>
+          <button class="add-product" data-id="duvet-insert" data-name="Duvet Insert" data-price="15000" data-meta="Duvet filling">₦15,000 · Add</button>
         </div>
       </div>
     </article>
 
     <article class="product-card" data-category="pillows">
-      <div class="product-art"><div class="pillow-art" id="art-pillowcase"></div></div>
+      <div class="product-art"><img class="product-photo" src="https://i.ebayimg.com/images/g/Sf0AAOSwEblmaT3q/s-l1200.jpg" alt="Neutral linen pillow and duvet inspiration" loading="lazy"><span class="photo-label">Bedding inspiration</span><div class="pillow-art" id="art-pillowcase" style="display:none"></div></div>
       <div class="product-info">
         <h3>Pillowcase</h3><div class="product-meta">Cream · Taupe · Chocolate</div>
         <div class="swatches">
@@ -261,19 +267,19 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
         </div>
         <div class="product-bottom">
           <div class="qty"><button class="minus">−</button><span>1</span><button class="plus">+</button></div>
-          <button class="add-product" data-id="pillowcase" data-name="Pillowcase" data-price="4000" data-meta="Pillowcase">₦4,000 · Add</button>
+          <button class="add-product" data-id="pillowcase" data-name="Pillowcase" data-price="3000" data-meta="Pillowcase">₦3,000 · Add</button>
         </div>
       </div>
     </article>
 
     <article class="product-card" data-category="pillows">
-      <div class="product-art"><div class="pillow-art" id="art-pillow-insert"></div></div>
+      <div class="product-art"><img class="product-photo" src="https://beddora.ca/cdn/shop/files/Brown_duvet_beige_sheet_set-01_a7d7510b-ba2d-415d-ba52-c73bb71f1f72.jpg?v=1780597427&width=2000" alt="Warm neutral bedding inspiration" loading="lazy"><span class="photo-label">Bedding inspiration</span><div class="pillow-art" id="art-pillow-insert" style="display:none"></div></div>
       <div class="product-info">
         <h3>Pillow Insert</h3><div class="product-meta">Soft filling · Cream</div>
         <div class="swatches"><button class="swatch" data-art="art-pillow-insert" data-color="#EFE6D6" data-name="Cream" style="background:#EFE6D6" aria-label="Cream"></button></div>
         <div class="product-bottom">
           <div class="qty"><button class="minus">−</button><span>1</span><button class="plus">+</button></div>
-          <button class="add-product" data-id="pillow-insert" data-name="Pillow Insert" data-price="6000" data-meta="Pillow filling">₦6,000 · Add</button>
+          <button class="add-product" data-id="pillow-insert" data-name="Pillow Insert" data-price="4500" data-meta="Pillow filling">₦4,500 · Add</button>
         </div>
       </div>
     </article>
@@ -298,8 +304,8 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
 
 <aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
   <div class="drawer-head"><h2>Your cart</h2><button class="close" id="closeCart">×</button></div>
-  <div class="cart-items" id="cartItems"><div class="empty">Your cart is empty.<br>Let's get you comfortable.</div></div>
-  <div class="drawer-bottom"><div class="total-row"><span>Total</span><span id="cartTotal">₦0</span></div><button class="checkout-btn" id="checkoutButton">Checkout via WhatsApp</button></div>
+  <div class="cart-items" id="cartItems"><div class="order-status" id="orderStatus"></div><div class="empty">Your cart is empty.<br>Let's get you comfortable.</div></div>
+  <div class="drawer-bottom"><div class="total-row"><span>Total</span><span id="cartTotal">₦0</span></div><button class="checkout-btn" id="checkoutButton">Review & place order</button></div>
 </aside>
 
 <div class="modal" id="checkoutModal">
@@ -333,8 +339,19 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
     const totalEl=document.getElementById("cartTotal");
     const checkout=document.getElementById("checkoutButton");
 
+    const status=document.getElementById("orderStatus");
+    const savedOrder=localStorage.getItem("snugglesLastOrder");
+    if(savedOrder){
+      try{
+        const o=JSON.parse(savedOrder);
+        status.innerHTML=`<span class="status-dot"></span><strong>Order #${o.number}</strong> · Sent to WhatsApp · ${o.total}`;
+        status.classList.add("show");
+      }catch(err){status.classList.remove("show");}
+    }else status.classList.remove("show");
+
     if(!cart.length){
-      items.innerHTML='<div class="empty">Your cart is empty.<br>Let\'s get you comfortable.</div>';
+      items.innerHTML='<div class="empty">Your cart is empty.<br>Keep shopping and add everything you need.</div>';
+      if(status) items.prepend(status);
     }else{
       items.innerHTML=cart.map((item,index)=>`
         <div class="cart-item">
@@ -346,6 +363,9 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
           </div>
           <div class="cart-price">${money(item.price*item.qty)}</div>
         </div>`).join("");
+    }
+    if(status){
+      if(!items.contains(status)) items.prepend(status);
     }
 
     const countValue=cart.reduce((s,i)=>s+i.qty,0);
@@ -362,7 +382,7 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
     if(existing) existing.qty+=qty;
     else cart.push({...data,key,qty});
     updateCart();
-    openCart();
+    // Adding an item must not interrupt shopping; the customer can open the cart when ready.
   }
 
   function openCart(){
@@ -482,20 +502,28 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
       return;
     }
 
+    const orderNumber="SN"+String(Date.now()).slice(-6);
+    localStorage.setItem("snugglesLastOrder",JSON.stringify({number:orderNumber,total:money(total),time:new Date().toISOString()}));
     document.getElementById("checkoutContent").innerHTML=`
       <div class="success">
         <div class="success-icon">✓</div>
+        <p class="kicker" style="margin-bottom:8px">Order confirmation</p>
         <h2>Order sent</h2>
-        <p class="modal-copy">Your WhatsApp order has been prepared successfully.<br>Total: <strong>${money(total)}</strong></p>
+        <p class="modal-copy">Your order <strong>#${orderNumber}</strong> has been sent to Snuggles on WhatsApp.</p>
+        <div class="confirm-list">
+          ${cart.map(i=>`<div class="confirm-row"><span>${i.name}${i.color?" · "+i.color:""} × ${i.qty}</span><strong>${money(i.price*i.qty)}</strong></div>`).join("")}
+          <div class="confirm-row"><span>Total</span><strong>${money(total)}</strong></div>
+        </div>
+        <p class="modal-copy" style="font-size:12px">Keep your order number <strong>#${orderNumber}</strong> for reference. If WhatsApp is open, make sure you tap <strong>Send</strong> on the message.</p>
         <div class="modal-actions">
-          <button type="button" id="newOrder">Start a new order</button>
+          <button type="button" id="newOrder">Continue shopping</button>
           <button type="button" class="send" id="closeSuccess">Close</button>
         </div>
       </div>`;
 
     document.getElementById("closeSuccess").addEventListener("click",closeCheckout);
     document.getElementById("newOrder").addEventListener("click",()=>{
-      cart.length=0;updateCart();closeCheckout();location.hash="individual-shop";location.reload();
+      cart.length=0;updateCart();closeCheckout();document.getElementById("individual-shop").scrollIntoView({behavior:"smooth"});
     });
   });
 
