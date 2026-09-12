@@ -334,7 +334,7 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
     const checkout=document.getElementById("checkoutButton");
 
     if(!cart.length){
-      items.innerHTML='<div class="empty">Your cart is empty.<br>Let\\'s get you comfortable.</div>';
+      items.innerHTML='<div class="empty">Your cart is empty.<br>Let\'s get you comfortable.</div>';
     }else{
       items.innerHTML=cart.map((item,index)=>`
         <div class="cart-item">
@@ -473,7 +473,7 @@ input,textarea{width:100%;border:1px solid var(--line);background:white;border-r
       `City: ${String(form.get("city")).trim()}`,
       `State: ${String(form.get("state")).trim()}`,
       form.get("notes")?`Delivery notes: ${String(form.get("notes")).trim()}`:""
-    ].filter(Boolean).join("\\n");
+    ].filter(Boolean).join("\n");
 
     const url=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     const popup=window.open(url,"_blank");
